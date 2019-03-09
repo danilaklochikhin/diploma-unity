@@ -669,8 +669,8 @@ GameObject:
   - component: {fileID: 468146137}
   - component: {fileID: 468146136}
   m_Layer: 0
-  m_Name: Clamp (1)
-  m_TagString: Untagged
+  m_Name: Clamp2
+  m_TagString: clamp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -703,8 +703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd97496d0b197f9408b14fd388892d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cable1: {fileID: 0}
-  Cable2: {fileID: 0}
+  Cable1: {fileID: 625527696}
+  Cable2: {fileID: 814832412}
   screwed1: 1
   screwed2: 1
 --- !u!65 &468146137
@@ -849,8 +849,8 @@ GameObject:
   - component: {fileID: 625527697}
   - component: {fileID: 625527702}
   m_Layer: 0
-  m_Name: Cable (5)
-  m_TagString: Automate
+  m_Name: Cable Automat1
+  m_TagString: cable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -870,7 +870,6 @@ MonoBehaviour:
   type: null
   group: 1
   U: 0
-  clamp: {fileID: 468146134}
 --- !u!65 &625527698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -975,8 +974,8 @@ GameObject:
   - component: {fileID: 814832418}
   - component: {fileID: 814832417}
   m_Layer: 0
-  m_Name: Cable (3)
-  m_TagString: lamp
+  m_Name: Cable Lamp1
+  m_TagString: cable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1069,7 +1068,6 @@ MonoBehaviour:
   type: 
   group: 0
   U: 0
-  clamp: {fileID: 468146134}
 --- !u!54 &814832418
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1284,8 +1282,8 @@ GameObject:
   - component: {fileID: 897090507}
   - component: {fileID: 897090511}
   m_Layer: 0
-  m_Name: Cable (1)
-  m_TagString: switch
+  m_Name: Cable Switch1
+  m_TagString: cable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1319,7 +1317,6 @@ MonoBehaviour:
   type: 
   group: 0
   U: 0
-  clamp: {fileID: 2033024147}
 --- !u!65 &897090508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1409,8 +1406,8 @@ GameObject:
   - component: {fileID: 901010486}
   - component: {fileID: 901010491}
   m_Layer: 0
-  m_Name: Cable
-  m_TagString: switch
+  m_Name: Cable Switch
+  m_TagString: cable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1430,7 +1427,6 @@ MonoBehaviour:
   type: 
   group: 0
   U: 0
-  clamp: {fileID: 1136229942}
 --- !u!65 &901010487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1530,7 +1526,6 @@ GameObject:
   - component: {fileID: 941274075}
   - component: {fileID: 941274078}
   - component: {fileID: 941274077}
-  - component: {fileID: 941274076}
   m_Layer: 0
   m_Name: Cable (3)
   m_TagString: Automate
@@ -1552,19 +1547,6 @@ Transform:
   m_Father: {fileID: 1546622086}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!65 &941274076
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941274074}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &941274077
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1716,7 +1698,7 @@ GameObject:
   - component: {fileID: 1136229947}
   m_Layer: 0
   m_Name: Clamp
-  m_TagString: Untagged
+  m_TagString: clamp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1807,8 +1789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd97496d0b197f9408b14fd388892d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cable1: {fileID: 0}
-  Cable2: {fileID: 0}
+  Cable1: {fileID: 1635107466}
+  Cable2: {fileID: 901010485}
   screwed1: 1
   screwed2: 1
 --- !u!1 &1332975735 stripped
@@ -2020,8 +2002,8 @@ GameObject:
   - component: {fileID: 1546622082}
   - component: {fileID: 1546622087}
   m_Layer: 0
-  m_Name: Cable (3)
-  m_TagString: lamp
+  m_Name: Cable Lamp
+  m_TagString: cable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2041,7 +2023,6 @@ MonoBehaviour:
   type: 
   group: 0
   U: 0
-  clamp: {fileID: 2033024147}
 --- !u!65 &1546622083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2305,8 +2286,8 @@ GameObject:
   - component: {fileID: 1635107467}
   - component: {fileID: 1635107472}
   m_Layer: 0
-  m_Name: Cable (2)
-  m_TagString: Automate
+  m_Name: Cable Automat
+  m_TagString: cable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2323,10 +2304,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a4db8d6c4e808439af638b4b016d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: line
-  group: 1
-  U: 220
-  clamp: {fileID: 1136229942}
+  type: 
+  group: 0
+  U: 0
 --- !u!65 &1635107468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2748,8 +2728,8 @@ GameObject:
   - component: {fileID: 2033024150}
   - component: {fileID: 2033024149}
   m_Layer: 0
-  m_Name: Clamp
-  m_TagString: Untagged
+  m_Name: Clamp1
+  m_TagString: clamp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2782,8 +2762,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd97496d0b197f9408b14fd388892d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cable1: {fileID: 0}
-  Cable2: {fileID: 0}
+  Cable1: {fileID: 1546622081}
+  Cable2: {fileID: 897090505}
   screwed1: 1
   screwed2: 1
 --- !u!65 &2033024150
@@ -3650,6 +3630,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 7c74c59f596559f418cb05bca830df72,
         type: 2}
+    - target: {fileID: 7312063316167762780, guid: 0147a1cdd35375b4781f66aa9e793f99,
+        type: 3}
+      propertyPath: Cable1
+      value: 
+      objectReference: {fileID: 901010485}
+    - target: {fileID: 7312063316167762780, guid: 0147a1cdd35375b4781f66aa9e793f99,
+        type: 3}
+      propertyPath: Cable2
+      value: 
+      objectReference: {fileID: 897090505}
     - target: {fileID: 7312063316167762776, guid: 0147a1cdd35375b4781f66aa9e793f99,
         type: 3}
       propertyPath: m_Enabled
@@ -3725,8 +3715,103 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8708934102690081058, guid: 203474aa717a5f5458d02a54de120cea,
+        type: 3}
+      propertyPath: group
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708934102690081058, guid: 203474aa717a5f5458d02a54de120cea,
+        type: 3}
+      propertyPath: Cable
+      value: 
+      objectReference: {fileID: 1635107466}
+    - target: {fileID: 8708934102690081058, guid: 203474aa717a5f5458d02a54de120cea,
+        type: 3}
+      propertyPath: interaction
+      value: 
+      objectReference: {fileID: 11400000, guid: 250b5c55c7fdf8e41b6bfd237741b4d0,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 203474aa717a5f5458d02a54de120cea, type: 3}
+--- !u!1001 &8853642412976236406
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3872542972832525953, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_Name
+      value: OnOffAutomate
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 62894747339626395, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961834772427026003, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: tool
+      value: 
+      objectReference: {fileID: 225381417}
+    - target: {fileID: 4961834772427026003, guid: 002a3bcc2ad461a48870c31715efd6e4,
+        type: 3}
+      propertyPath: Automat
+      value: 
+      objectReference: {fileID: 1412034509}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 002a3bcc2ad461a48870c31715efd6e4, type: 3}
 --- !u!1001 &9046822205217437672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3819,5 +3904,10 @@ PrefabInstance:
       propertyPath: Cable1
       value: 
       objectReference: {fileID: 901010485}
+    - target: {fileID: 1764564532749456224, guid: 5f6279329f23d6f4ea91bbc769901fbd,
+        type: 3}
+      propertyPath: sw
+      value: 
+      objectReference: {fileID: 1332975735}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f6279329f23d6f4ea91bbc769901fbd, type: 3}

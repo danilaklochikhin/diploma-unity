@@ -5,8 +5,8 @@ using UnityEngine;
 public class Cap : MonoBehaviour
 {
     public GameObject lamp;
-    // public GameObject cap;
     public bool connection = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,6 @@ public class Cap : MonoBehaviour
         {
             connection = true;
         }
-        Debug.Log("con");
     }
 
     void OnTriggerExit(Collider otherObj)
@@ -34,6 +33,5 @@ public class Cap : MonoBehaviour
         {
             connection = false;
         }
-        Debug.Log("no");
     }
 }

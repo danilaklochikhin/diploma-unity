@@ -7,8 +7,6 @@ public class Cable : MonoBehaviour
     public string type;
     public int group;
     public float U;
-    //public bool onClamp = false;
-    public GameObject clamp;
 
     // Start is called before the first frame update
     void Start()
@@ -20,15 +18,5 @@ public class Cable : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnTriggerStay(Collider other)
-    {
-        clamp = other.gameObject;
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        clamp = null;
     }
 }
