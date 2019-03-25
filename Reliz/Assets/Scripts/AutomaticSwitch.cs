@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class AutomaticSwitch : MonoBehaviour
 {
+    public GameObject tool;
     public GameObject Cable;
     public float U;
     public int group;
     public bool on;
+
     [SerializeField]
-    private Interactions interaction;
+    private OnOffAutomat interaction;
     // Start is called before the first frame update
     void Start()
     {
-
+        interaction.initializ(tool, gameObject);
     }
 
     // Update is called once per frame
@@ -31,5 +33,10 @@ public class AutomaticSwitch : MonoBehaviour
             Cable.GetComponent<Cable>().group = group;
             Cable.GetComponent<Cable>().U = 0;
         }
+    }
+
+    void OnMouseDown()
+    {
+        interaction.press();
     }
 }

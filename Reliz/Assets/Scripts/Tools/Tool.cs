@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Tool : MonoBehaviour
 {
-    [SerializeField] private Tools tools;
-    public string name = "";
-    private item tool;
+    public string name; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +15,6 @@ public class Tool : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (name == "hand")
-            tool = tools.items[0];
+        
     }
 }

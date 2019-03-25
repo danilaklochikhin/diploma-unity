@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 347970cf39d12a04b87e493fe1d301d4, type: 3}
-  m_Name: Tools
+  m_Name: screwdriver
   m_EditorClassIdentifier: 
-  items:
-  - name: hand
+  name: screwdriver
+  image: {fileID: 21300000, guid: e990d244c706d2a4caec3c726b7f6492, type: 3}
+  panel: {fileID: 0}
