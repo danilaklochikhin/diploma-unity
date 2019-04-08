@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6931844bd87894689db975eef28749, type: 3}
-  m_Name: On Off Switch
+  m_Script: {fileID: 11500000, guid: ae8ff943f97409d4399a30209fbc4737, type: 3}
+  m_Name: Screw Un Screw
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   tool: {fileID: 0}

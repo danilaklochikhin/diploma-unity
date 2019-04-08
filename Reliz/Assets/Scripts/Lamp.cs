@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Lamp : MonoBehaviour
 {
-    public GameObject tool, L, N, cap;
+    public GameObject tool, cap; // Инструмент, выбранный пользователем, 
+                                 // и цоколь, в который вкручена лампочка. 
+    
+    public bool connection = false;
     public bool fused;
 
     [SerializeField]
@@ -12,14 +15,29 @@ public class Lamp : MonoBehaviour
 
     void Start()
     {
+        // Инициализируем взаимодействие СветитьНеСветить
         interaction.initializ(tool, gameObject);
     }
     void Update()
     {
-        interaction.shine(L, N, cap);
+        // Вызываем функцию светить 
+        // В качестве входных параметров передаем фазу и ноль с цоколя
+        interaction.shine(cap.GetComponent<Cap>().L, cap.GetComponent<Cap>().N);
     }
-    //void initializ(Interactions i)
-    //{
-    //    interaction = i;
-    //}
+    void OnTriggerStay(Collider otherObj)
+    {
+        if (otherObj.GetComponent<Cap>().lamp == gameObject)
+        {
+            connection = true;
+        }
+    }
+
+    void OnTriggerExit(Collider otherObj)
+    {
+        if (otherObj.GetComponent<Cap>().lamp == gameObject)
+        {
+            connection = false;
+        }
+    }
+    
 }

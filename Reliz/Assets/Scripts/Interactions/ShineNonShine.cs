@@ -15,13 +15,13 @@ public class ShineNonShine : Interactions
 
 
     // Update is called once per frame
-    public void shine(GameObject L, GameObject N, GameObject cap)
+    public void shine(GameObject L, GameObject N)
     {
         fused = target.GetComponent<Lamp>().fused;
 
         if (fused)
             target.GetComponent<Light>().enabled = false;
-        else if (cap.GetComponent<Cap>().connection)
+        else if (target.GetComponent<Lamp>().connection)
         {
             if (L.GetComponent<Cable>().type == "line" && L.GetComponent<Cable>().U == 220 && N.GetComponent<Cable>().type == "null" && L.GetComponent<Cable>().group == N.GetComponent<Cable>().group)
                 target.GetComponent<Light>().enabled = true;

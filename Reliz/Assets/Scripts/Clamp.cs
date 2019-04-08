@@ -6,8 +6,7 @@ public class Clamp : MonoBehaviour
 {
     public GameObject Cable1 = null;
     public GameObject Cable2 = null;
-    public bool screwed1 = true;
-    public bool screwed2 = true;
+    public GameObject clam1, clam2;
     private Cable cable1;
     private Cable cable2;
     private GameObject input = null;
@@ -24,37 +23,58 @@ public class Clamp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (screwed1 && screwed2)
+        if (clam1.GetComponent<Clam>().screwed && clam2.GetComponent<Clam>().screwed)
         {
             if (cable1.type != "" && input == null)
             {
                 input = Cable1;
-                Cable2.GetComponent<Cable>().type = Cable1.GetComponent<Cable>().type;
-                Cable2.GetComponent<Cable>().group = cable1.group;
-                Cable2.GetComponent<Cable>().U = cable1.U;
+                initCab(Cable1, Cable2);
             }
             else if (cable2.type != "" && input == null)
             {
                 input = Cable2;
-                Cable1.GetComponent<Cable>().type = Cable2.GetComponent<Cable>().type;
-                Cable1.GetComponent<Cable>().group = cable2.group;
-                Cable1.GetComponent<Cable>().U = cable2.U;
+                initCab(Cable2, Cable1);
             }
             else if (input == Cable2)
             {
-                Cable1.GetComponent<Cable>().type = Cable2.GetComponent<Cable>().type;
-                Cable1.GetComponent<Cable>().group = cable2.group;
-                Cable1.GetComponent<Cable>().U = cable2.U;
+                initCab(Cable2, Cable1);
             }
             else if (input == Cable1)
             {
-                Cable2.GetComponent<Cable>().type = Cable1.GetComponent<Cable>().type;
-                Cable2.GetComponent<Cable>().group = cable1.group;
-                Cable2.GetComponent<Cable>().U = cable1.U;
+                initCab(Cable1, Cable2);
             }
+        }
+        else if (clam1.GetComponent<Clam>().screwed && input == Cable1)
+        {
+            nullCab(Cable1);
+        }
+        else if (clam1.GetComponent<Clam>().screwed && input == Cable2)
+        {
+            nullCab(Cable2);
+        }
+        else if (clam2.GetComponent<Clam>().screwed && input == Cable1)
+        {
+            nullCab(Cable2);
+        }
+        else if (clam2.GetComponent<Clam>().screwed && input == Cable2)
+        {
+            nullCab(Cable1);
         }
     }
 
+    void initCab(GameObject input, GameObject output)
+    {
+        output.GetComponent<Cable>().type = input.GetComponent<Cable>().type;
+        output.GetComponent<Cable>().group = input.GetComponent<Cable>().group;
+        output.GetComponent<Cable>().U = input.GetComponent<Cable>().U;
+    }
+
+    void nullCab(GameObject cab)
+    {
+        cab.GetComponent<Cable>().type = "";
+        cab.GetComponent<Cable>().group = 0;
+        cab.GetComponent<Cable>().U = 0;
+    }
     void OnTriggerStay(Collider other)
     {
         if (Cable1 == null)
@@ -76,9 +96,7 @@ public class Clamp : MonoBehaviour
             if (input == Cable1)
             {
                 input = null;
-                Cable2.GetComponent<Cable>().type = "";
-                Cable2.GetComponent<Cable>().group = 0;
-                Cable2.GetComponent<Cable>().U = 0;
+                nullCab(Cable2);
             }
             Cable1 = null;
             cable1 = null;
@@ -88,9 +106,7 @@ public class Clamp : MonoBehaviour
             if (input == Cable2)
             {
                 input = null;
-                Cable1.GetComponent<Cable>().type = "";
-                Cable1.GetComponent<Cable>().group = 0;
-                Cable1.GetComponent<Cable>().U = 0;
+                nullCab(Cable1);
             }
             Cable2 = null;
             cable2 = null;

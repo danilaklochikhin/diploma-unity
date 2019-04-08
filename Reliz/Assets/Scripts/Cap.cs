@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Cap : MonoBehaviour
 {
-    public GameObject lamp;
-    public bool connection = false;
+    public GameObject lamp, L, N;
 
     // Start is called before the first frame update
     void Start()
@@ -17,21 +16,5 @@ public class Cap : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnTriggerStay(Collider otherObj)
-    {
-        if (otherObj.gameObject == lamp)
-        {
-            connection = true;
-        }
-    }
-
-    void OnTriggerExit(Collider otherObj)
-    {
-        if (otherObj.gameObject == lamp)
-        {
-            connection = false;
-        }
     }
 }

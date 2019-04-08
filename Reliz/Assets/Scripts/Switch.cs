@@ -11,7 +11,7 @@ public class Switch : MonoBehaviour
     private GameObject input;
 
     [SerializeField]
-    private OnOffSwitch interaction;
+    private OnOff interaction;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +68,6 @@ public class Switch : MonoBehaviour
     }
     void OnMouseDown()
     {
-        interaction.press();
+        interaction.press(gameObject);
     }
 }

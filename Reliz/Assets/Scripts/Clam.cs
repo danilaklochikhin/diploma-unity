@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnScrewLamp : MonoBehaviour
+public class Clam : MonoBehaviour
 {
+    public bool screwed;
+    public Color color = Color.yellow;
     public GameObject tool;
-    public GameObject lamp;
-    public GameObject cap;
+
+    [SerializeField]
+    private ScrewUnScrew interaction;
     // Start is called before the first frame update
     void Start()
     {
-        
+        interaction.initializ(tool, gameObject);
     }
 
     // Update is called once per frame
@@ -21,12 +24,6 @@ public class UnScrewLamp : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (tool.GetComponent<Tool>().name == "hand")
-        {
-            if (cap.GetComponent<Cap>().connection)
-            {
-
-            }
-        }
+        interaction.screw();
     }
 }
