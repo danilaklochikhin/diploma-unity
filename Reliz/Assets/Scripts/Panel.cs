@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class Panel : MonoBehaviour
 {
-    public Tool tool;
-    //public int index; //индекс инструмента 
+    public GameObject tool;
+    public GameObject parent;
 
     [SerializeField]
     private Tools tools;
     // Start is called before the first frame update
     void Start()
     {
-        tools.initializ(gameObject);
-        tools.DrawPanel();
+        tools.initializ(gameObject, parent);
 
         if (gameObject.name == "Hand")
         {
-            tool.name = tools.name; ;
+            tool.GetComponent<Tool>().name = tools.name;
+            tool.GetComponent<Tool>().tool = null;
+            tools.DrawTool();
         }
     }
 
@@ -27,8 +28,10 @@ public class Panel : MonoBehaviour
         
     }
 
-    void OnMouseDown()
+    // Функция выбора инструмента 
+    public void Press()
     {
-        tool.name = tools.name;
+        tool.GetComponent<Tool>().name = tools.name;
+        tools.DrawTool();
     }
 }

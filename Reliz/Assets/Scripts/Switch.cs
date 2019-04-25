@@ -25,22 +25,41 @@ public class Switch : MonoBehaviour
         {
             if ((Cable1.GetComponent<Cable>().type == "line" || Cable1.GetComponent<Cable>().type == "null ") && Cable2.GetComponent<Cable>().type == "")
             {
-                input = Cable1;
-                Cable2.GetComponent<Cable>().type = Cable1.GetComponent<Cable>().type;
-                Cable2.GetComponent<Cable>().group = Cable1.GetComponent<Cable>().group;
-                Cable2.GetComponent<Cable>().U = Cable1.GetComponent<Cable>().U;
+                if (input == Cable2)
+                {
+                    Cable1.GetComponent<Cable>().type = Cable2.GetComponent<Cable>().type;
+                    Cable1.GetComponent<Cable>().group = Cable2.GetComponent<Cable>().group;
+                    Cable1.GetComponent<Cable>().U = Cable2.GetComponent<Cable>().U;
+                }
+                else
+                {
+                    input = Cable1;
+                    Cable2.GetComponent<Cable>().type = Cable1.GetComponent<Cable>().type;
+                    Cable2.GetComponent<Cable>().group = Cable1.GetComponent<Cable>().group;
+                    Cable2.GetComponent<Cable>().U = Cable1.GetComponent<Cable>().U;
+                }
             }
             else if ((Cable2.GetComponent<Cable>().type == "line" || Cable2.GetComponent<Cable>().type == "null ") && Cable1.GetComponent<Cable>().type == "")
             {
-                input = Cable2;
-                Cable1.GetComponent<Cable>().type = Cable2.GetComponent<Cable>().type;
-                Cable1.GetComponent<Cable>().group = Cable2.GetComponent<Cable>().group;
-                Cable1.GetComponent<Cable>().U = Cable2.GetComponent<Cable>().U;
+                if (input == Cable1)
+                {
+                    Cable2.GetComponent<Cable>().type = Cable1.GetComponent<Cable>().type;
+                    Cable2.GetComponent<Cable>().group = Cable1.GetComponent<Cable>().group;
+                    Cable2.GetComponent<Cable>().U = Cable1.GetComponent<Cable>().U;
+                }
+                else
+                {
+                    input = Cable2;
+                    Cable1.GetComponent<Cable>().type = Cable2.GetComponent<Cable>().type;
+                    Cable1.GetComponent<Cable>().group = Cable2.GetComponent<Cable>().group;
+                    Cable1.GetComponent<Cable>().U = Cable2.GetComponent<Cable>().U;
+                }
             }
             else if (Cable2.GetComponent<Cable>().type == "line" && Cable1.GetComponent<Cable>().type == "line")
             {
                 if (input == Cable1)
                 {
+                    Debug.Log("ok");
                     Cable2.GetComponent<Cable>().U = Cable1.GetComponent<Cable>().U;
                 }
                 else if (input == Cable2)
@@ -51,6 +70,7 @@ public class Switch : MonoBehaviour
         }
         else
         {
+            Debug.Log("else");
             if (input == Cable1)
             {
                 Cable2.GetComponent<Cable>().U = 0;

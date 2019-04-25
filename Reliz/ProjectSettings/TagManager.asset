@@ -10,6 +10,7 @@ TagManager:
   - clamp
   - cable
   - clam
+  - Opening
   layers:
   - Default
   - TransparentFX

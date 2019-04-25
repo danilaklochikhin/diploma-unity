@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 347970cf39d12a04b87e493fe1d301d4, type: 3}
-  m_Name: screwdriver
+  m_Name: indicator
   m_EditorClassIdentifier: 
-  name: screwdriver
-  image: {fileID: 21300000, guid: e990d244c706d2a4caec3c726b7f6492, type: 3}
+  name: Indicator
+  image: {fileID: 21300000, guid: 26b9c781a20a7aa4f983e9861622efc3, type: 3}
   panel: {fileID: 0}
+  toolVisual: {fileID: 4024055563181691979, guid: 68f3b7f32bacb3a438e0d0c12dfc567b,
+    type: 3}
+  clone: {fileID: 0}
+  startPosition: {x: 9.96, y: 4.81, z: 6}

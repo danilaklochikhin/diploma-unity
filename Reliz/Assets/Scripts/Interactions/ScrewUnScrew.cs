@@ -23,14 +23,18 @@ public class ScrewUnScrew : Interactions
         target = objTarget;
     }
 
-    public void screw()
+    public void screw(GameObject go)
     {
+        target = go;
+
         if (tool.GetComponent<Tool>().name == "screwdriver")
         {
             if (target.tag == "clam")
             {
                 if (target.GetComponent<Clam>().screwed)
+                {
                     target.GetComponent<Clam>().screwed = false;
+                }
                 else target.GetComponent<Clam>().screwed = true;
             }
         }

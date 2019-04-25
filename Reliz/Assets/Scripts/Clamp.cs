@@ -46,11 +46,11 @@ public class Clamp : MonoBehaviour
         }
         else if (clam1.GetComponent<Clam>().screwed && input == Cable1)
         {
-            nullCab(Cable1);
+            nullCab(Cable2);
         }
         else if (clam1.GetComponent<Clam>().screwed && input == Cable2)
         {
-            nullCab(Cable2);
+            nullCab(Cable1);
         }
         else if (clam2.GetComponent<Clam>().screwed && input == Cable1)
         {
@@ -60,6 +60,9 @@ public class Clamp : MonoBehaviour
         {
             nullCab(Cable1);
         }
+
+        clam1.GetComponent<Clam>().U = Cable1.GetComponent<Cable>().U;
+        clam2.GetComponent<Clam>().U = Cable2.GetComponent<Cable>().U;
     }
 
     void initCab(GameObject input, GameObject output)

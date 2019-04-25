@@ -2,22 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Clam : MonoBehaviour
+public class Opening : MonoBehaviour
 {
-    public bool screwed;
-    public Color color = Color.yellow;
+    public float U; //Напряжение в отверстие розетки
     public GameObject tool;
-    public float U;
 
     [SerializeField]
-    private ScrewUnScrew interaction;
-    [SerializeField]
-    private Indication interaction1;
+    private Indication interaction;
+
     // Start is called before the first frame update
     void Start()
     {
         interaction.initializ(tool, gameObject);
-        interaction1.initializ(tool, gameObject);
     }
 
     // Update is called once per frame
@@ -26,20 +22,15 @@ public class Clam : MonoBehaviour
         
     }
 
-    void OnMouseDown()
-    {
-        interaction.screw(gameObject);
-    }
-
     // Кнопка мыши нажата
     void OnMouseDrag()
     {
-        interaction1.Display(U);
+        interaction.Display(U);
     }
 
     // Кнопка мыши отпущена
     void OnMouseUp()
     {
-        interaction1.Display(0);
+        interaction.Display(0);
     }
 }
