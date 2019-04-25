@@ -59,7 +59,6 @@ public class Switch : MonoBehaviour
             {
                 if (input == Cable1)
                 {
-                    Debug.Log("ok");
                     Cable2.GetComponent<Cable>().U = Cable1.GetComponent<Cable>().U;
                 }
                 else if (input == Cable2)
@@ -70,7 +69,6 @@ public class Switch : MonoBehaviour
         }
         else
         {
-            Debug.Log("else");
             if (input == Cable1)
             {
                 Cable2.GetComponent<Cable>().U = 0;

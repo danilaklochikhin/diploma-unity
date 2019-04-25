@@ -32,11 +32,11 @@ public class Tools : ScriptableObject
     // Отрисовка выбранного инструмента
     public void DrawTool()
     {
-        // Возвращаем в стартовую позицию
+        // 
         //clone.transform.position = startPosition;
 
         // Передаем визуализацию в инструмент
-        panel.GetComponent<Panel>().tool.GetComponent<Tool>().newTool(clone);
+        panel.GetComponent<Panel>().tool.GetComponent<Tool>().newTool(clone, panel);
     }
 }
 

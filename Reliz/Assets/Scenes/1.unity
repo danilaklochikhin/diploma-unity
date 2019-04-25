@@ -1849,6 +1849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   tool: {fileID: 0}
+  activePanel: {fileID: 1867616304}
 --- !u!4 &485503136
 Transform:
   m_ObjectHideFlags: 0
@@ -6715,9 +6716,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.26415092, g: 0.22552508, b: 0.22552508, a: 1}
-    m_PressedColor: {r: 0.3584906, g: 0.3094518, b: 0.3094518, a: 1}
-    m_DisabledColor: {r: 0.3018868, g: 0.3004628, b: 0.3004628, a: 0.5019608}
+    m_HighlightedColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+    m_PressedColor: {r: 0.5019608, g: 0.48235294, b: 0.5019608, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
