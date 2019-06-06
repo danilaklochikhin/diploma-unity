@@ -11,7 +11,9 @@ public class Lamp : MonoBehaviour
     public bool fused;
 
     [SerializeField]
-    private ShineNonShine interaction;
+    private ShineNonShine interaction; // Взаимодействие, отвечающее за свечение лампочки
+    [SerializeField]
+    private ScrewUnScrew interactionSUS;// Взаимодействие, отвечающее за закручивание и откручивание лампочки от цоколя
 
     void Start()
     {

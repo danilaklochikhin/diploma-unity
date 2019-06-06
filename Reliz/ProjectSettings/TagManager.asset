@@ -11,6 +11,7 @@ TagManager:
   - cable
   - clam
   - Opening
+  - AssessmemtSistem
   layers:
   - Default
   - TransparentFX

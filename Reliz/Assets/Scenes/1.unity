@@ -4422,6 +4422,36 @@ MonoBehaviour:
   tool: {fileID: 485503134}
   parent: {fileID: 520446858}
   tools: {fileID: 11400000, guid: adb7b2275d01f7147b90dc6086d54e89, type: 2}
+--- !u!1 &1229061074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229061075}
+  m_Layer: 0
+  m_Name: AssessmemtSistem
+  m_TagString: AssessmemtSistem
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1229061075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229061074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.89102, y: 7.24843, z: 11.372713}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281847687
 GameObject:
   m_ObjectHideFlags: 0
@@ -7569,6 +7599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 6582988586540422788, guid: 9cea60c5d261cc947877e0fa7269687c,
+        type: 3}
+      propertyPath: m_TagString
+      value: lamp
+      objectReference: {fileID: 0}
     - target: {fileID: 6582988586540422784, guid: 9cea60c5d261cc947877e0fa7269687c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7665,6 +7700,12 @@ PrefabInstance:
       propertyPath: cap
       value: 
       objectReference: {fileID: 1210202492}
+    - target: {fileID: 6221787496319272421, guid: 9cea60c5d261cc947877e0fa7269687c,
+        type: 3}
+      propertyPath: interactionSUS
+      value: 
+      objectReference: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7,
+        type: 2}
     - target: {fileID: 3739261302922824997, guid: 9cea60c5d261cc947877e0fa7269687c,
         type: 3}
       propertyPath: m_Range
