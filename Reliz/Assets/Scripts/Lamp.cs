@@ -13,7 +13,9 @@ public class Lamp : MonoBehaviour
     [SerializeField]
     private ShineNonShine interaction; // Взаимодействие, отвечающее за свечение лампочки
     [SerializeField]
-    private ScrewUnScrew interactionSUS;// Взаимодействие, отвечающее за закручивание и откручивание лампочки от цоколя
+    private ScrewUnScrew interactionSUS;// Взаимодействие, отвечающее за откручивание лампочки от цоколя
+    [SerializeField]
+    private CheckPoint CheckPoint;// Класс оценки действий игрока
 
     void Start()
     {
@@ -40,6 +42,12 @@ public class Lamp : MonoBehaviour
         {
             connection = false;
         }
+    }
+
+    void OnMouseDown()
+    {
+        CheckPoint.CheckInteraction(tool.GetComponent<Tool>().name);
+        interactionSUS.screw(gameObject);
     }
     
 }
