@@ -15,7 +15,7 @@ public class CheckPoint : ScriptableObject
     public void NullNotOffU()
     {
         notCheckU = true;
-        Debug.Log("U = "+InputU);
+
         if (InputU != 0)
         {
             notOffU = true;
@@ -36,7 +36,6 @@ public class CheckPoint : ScriptableObject
     // nameTool - название инструмента, которым было совершено действие
     public void CheckInteraction(string nameTool)
     {
-        Debug.Log("Chek - " + notCheckU + "\n" + "Off - " + notOffU);
         // Алгоритм оценивания действий игрока
         if (InputU == 0) // Нет напряжения
         {
@@ -77,11 +76,9 @@ public class CheckPoint : ScriptableObject
                 }
                 else 
                 {
-                    Debug.Log("EndTest");
+                    Score = -1;
                 }
             }
-        }
-        Debug.Log(Score);
- 
+        } 
    }
 }
