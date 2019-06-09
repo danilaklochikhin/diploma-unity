@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd97496d0b197f9408b14fd388892d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cable1: {fileID: 0}
+  Cable1: {fileID: 1592782289}
   Cable2: {fileID: 1680681054}
   clam1: {fileID: 1768621553}
   clam2: {fileID: 1326285904}
@@ -1027,6 +1027,7 @@ MonoBehaviour:
   U: 0
   interaction: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7, type: 2}
   interaction1: {fileID: 11400000, guid: cea34bf5b2f841247a9b69b83c901772, type: 2}
+  CheckPoint: {fileID: 0}
 --- !u!1 &318993674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +1618,7 @@ MonoBehaviour:
   U: 0
   interaction: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7, type: 2}
   interaction1: {fileID: 11400000, guid: cea34bf5b2f841247a9b69b83c901772, type: 2}
+  CheckPoint: {fileID: 11400000, guid: f70270211e6017e42be13160a4f17e3c, type: 2}
 --- !u!1 &461603611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,6 +2115,7 @@ MonoBehaviour:
   group: 1
   on: 1
   interaction: {fileID: 11400000, guid: ed7dd316cfde36d4f903eddebc926f42, type: 2}
+  CheckPoint: {fileID: 11400000, guid: f70270211e6017e42be13160a4f17e3c, type: 2}
 --- !u!1 &529137426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3209,6 +3212,7 @@ MonoBehaviour:
   U: 0
   interaction: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7, type: 2}
   interaction1: {fileID: 11400000, guid: cea34bf5b2f841247a9b69b83c901772, type: 2}
+  CheckPoint: {fileID: 11400000, guid: f70270211e6017e42be13160a4f17e3c, type: 2}
 --- !u!1 &869853565
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,8 +3449,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   humidity: 30
   CheckPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f70270211e6017e42be13160a4f17e3c, type: 2}
+  - {fileID: 11400000, guid: b9d586778c0042847800a09a1007fa9e, type: 2}
 --- !u!4 &878026298
 Transform:
   m_ObjectHideFlags: 0
@@ -3899,6 +3903,7 @@ MonoBehaviour:
   U: 0
   interaction: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7, type: 2}
   interaction1: {fileID: 11400000, guid: cea34bf5b2f841247a9b69b83c901772, type: 2}
+  CheckPoint: {fileID: 0}
 --- !u!1 &1122429033
 GameObject:
   m_ObjectHideFlags: 0
@@ -4669,6 +4674,7 @@ MonoBehaviour:
   U: 0
   interaction: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7, type: 2}
   interaction1: {fileID: 11400000, guid: cea34bf5b2f841247a9b69b83c901772, type: 2}
+  CheckPoint: {fileID: 0}
 --- !u!135 &1312585359
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4966,6 +4972,7 @@ MonoBehaviour:
   U: 0
   interaction: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7, type: 2}
   interaction1: {fileID: 11400000, guid: cea34bf5b2f841247a9b69b83c901772, type: 2}
+  CheckPoint: {fileID: 0}
 --- !u!135 &1326285907
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5134,6 +5141,7 @@ MonoBehaviour:
   U: 0
   interaction: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7, type: 2}
   interaction1: {fileID: 11400000, guid: cea34bf5b2f841247a9b69b83c901772, type: 2}
+  CheckPoint: {fileID: 11400000, guid: f70270211e6017e42be13160a4f17e3c, type: 2}
 --- !u!1 &1361608013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5277,6 +5285,7 @@ MonoBehaviour:
   U: 0
   interaction: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7, type: 2}
   interaction1: {fileID: 11400000, guid: cea34bf5b2f841247a9b69b83c901772, type: 2}
+  CheckPoint: {fileID: 0}
 --- !u!135 &1371481354
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5481,6 +5490,7 @@ MonoBehaviour:
   group: 2
   on: 1
   interaction: {fileID: 11400000, guid: ed7dd316cfde36d4f903eddebc926f42, type: 2}
+  CheckPoint: {fileID: 11400000, guid: b9d586778c0042847800a09a1007fa9e, type: 2}
 --- !u!65 &1494565205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5649,6 +5659,7 @@ MonoBehaviour:
   U: 0
   interaction: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7, type: 2}
   interaction1: {fileID: 11400000, guid: cea34bf5b2f841247a9b69b83c901772, type: 2}
+  CheckPoint: {fileID: 11400000, guid: f70270211e6017e42be13160a4f17e3c, type: 2}
 --- !u!1 &1546622081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8861602787483551990, guid: ddbc29bd5b7ff6948b1cf4c9f4bd1573,
@@ -6674,6 +6685,7 @@ MonoBehaviour:
   U: 0
   interaction: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7, type: 2}
   interaction1: {fileID: 11400000, guid: cea34bf5b2f841247a9b69b83c901772, type: 2}
+  CheckPoint: {fileID: 0}
 --- !u!135 &1768621556
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7753,6 +7765,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7,
         type: 2}
+    - target: {fileID: 6221787496319272421, guid: 9cea60c5d261cc947877e0fa7269687c,
+        type: 3}
+      propertyPath: CheckPoint
+      value: 
+      objectReference: {fileID: 11400000, guid: f70270211e6017e42be13160a4f17e3c,
+        type: 2}
     - target: {fileID: 3739261302922824997, guid: 9cea60c5d261cc947877e0fa7269687c,
         type: 3}
       propertyPath: m_Range
@@ -7842,6 +7860,23 @@ PrefabInstance:
       propertyPath: N
       value: 
       objectReference: {fileID: 814832412}
+    - target: {fileID: 6925130291082752394, guid: 59bdf8adfa015bd4a8369eed500a0705,
+        type: 3}
+      propertyPath: tool
+      value: 
+      objectReference: {fileID: 485503134}
+    - target: {fileID: 6925130291082752394, guid: 59bdf8adfa015bd4a8369eed500a0705,
+        type: 3}
+      propertyPath: interactionSUS
+      value: 
+      objectReference: {fileID: 11400000, guid: f2f2cd09c6947c14081049359ae993d7,
+        type: 2}
+    - target: {fileID: 6925130291082752394, guid: 59bdf8adfa015bd4a8369eed500a0705,
+        type: 3}
+      propertyPath: CheckPoint
+      value: 
+      objectReference: {fileID: 11400000, guid: f70270211e6017e42be13160a4f17e3c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59bdf8adfa015bd4a8369eed500a0705, type: 3}
 --- !u!1001 &7194652829686593089
@@ -8116,6 +8151,12 @@ PrefabInstance:
       propertyPath: tool
       value: 
       objectReference: {fileID: 485503134}
+    - target: {fileID: 7312063316167762780, guid: 0147a1cdd35375b4781f66aa9e793f99,
+        type: 3}
+      propertyPath: CheckPoint
+      value: 
+      objectReference: {fileID: 11400000, guid: f70270211e6017e42be13160a4f17e3c,
+        type: 2}
     - target: {fileID: 7312063316167762776, guid: 0147a1cdd35375b4781f66aa9e793f99,
         type: 3}
       propertyPath: m_Enabled

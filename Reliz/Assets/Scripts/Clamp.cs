@@ -20,8 +20,7 @@ public class Clamp : MonoBehaviour
             cable2 = Cable2.GetComponent<Cable>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (clam1.GetComponent<Clam>().screwed && clam2.GetComponent<Clam>().screwed)
         {

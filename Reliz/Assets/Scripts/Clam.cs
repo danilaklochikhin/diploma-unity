@@ -13,6 +13,9 @@ public class Clam : MonoBehaviour
     private ScrewUnScrew interaction;
     [SerializeField]
     private Indication interaction1;
+    [SerializeField]
+    private CheckPoint CheckPoint;// Класс оценки действий игрока
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +31,23 @@ public class Clam : MonoBehaviour
 
     void OnMouseDown()
     {
+        bool screwedBefor = screwed;
         interaction.screw(gameObject);
+        if (screwedBefor != screwed)
+        {
+            if (screwed)
+            CheckPoint.NullNotOffU();
+            else CheckPoint.notOffU = false;
+        }
     }
 
     // Кнопка мыши нажата
     void OnMouseDrag()
     {
-        interaction1.Display(U);
+        if (interaction1.Display(U))
+        {
+            CheckPoint.notCheckU = false;
+        }
     }
 
     // Кнопка мыши отпущена

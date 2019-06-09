@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notCheckU: 0
   notOffU: 0
-  Score: 0
-  InputU: 0
-  humidity: 0
+  Score: 1
+  InputU: 220
+  humidity: 30

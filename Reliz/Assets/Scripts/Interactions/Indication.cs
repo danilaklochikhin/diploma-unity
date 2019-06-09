@@ -12,7 +12,9 @@ public class Indication : Interactions
         target = objTarget;
     }
     // Функция индикации
-    public void Display(float U)
+    // Входные параметры: U - напряжение участка, который проверяем
+    // Возвращает 1 - если функция выполнилась, 0 - если нет
+    public bool Display(float U)
     {
         if (tool.GetComponent<Tool>().name == "Indicator")
         {
@@ -20,6 +22,9 @@ public class Indication : Interactions
                 tool.GetComponent<Tool>().tool.GetComponent<Light>().enabled = true;
             else
                 tool.GetComponent<Tool>().tool.GetComponent<Light>().enabled = false;
+
+            return true;
         }
+        return false;
     }
 }

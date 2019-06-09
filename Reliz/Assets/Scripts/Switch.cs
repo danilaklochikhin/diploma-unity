@@ -12,6 +12,9 @@ public class Switch : MonoBehaviour
 
     [SerializeField]
     private OnOff interaction;
+    [SerializeField]
+    private CheckPoint CheckPoint;// Класс оценки действий игрока
+
     // Start is called before the first frame update
     void Start()
     {
@@ -86,6 +89,13 @@ public class Switch : MonoBehaviour
     }
     void OnMouseDown()
     {
+        bool onBefor = on;
+
         interaction.press(gameObject);
+
+        if (onBefor != on)
+        {
+            CheckPoint.NullCheckU();
+        }
     }
 }

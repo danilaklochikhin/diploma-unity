@@ -13,6 +13,8 @@ public class AutomaticSwitch : MonoBehaviour
 
     [SerializeField]
     private OnOff interaction;
+    [SerializeField]
+    private CheckPoint CheckPoint;// Класс оценки действий игрока
     
     void Start()
     {
@@ -66,5 +68,17 @@ public class AutomaticSwitch : MonoBehaviour
     void OnMouseDown()
     {
         interaction.press(gameObject);
+        StartCoroutine(Wait());
+        if (on)
+        {
+            CheckPoint.NullNotOffU();
+        }
+        else CheckPoint.notOffU = false;
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForFixedUpdate();
+
     }
 }
