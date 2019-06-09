@@ -9,10 +9,12 @@ public class Socket : MonoBehaviour
     public int IP;
     public bool fused;
 
+    [SerializeField]
+    private Tasks tasks;// Cписок всех подзадач теста
     // Start is called before the first frame update
     void Start()
     {
-        
+        tasks.item[1].target = gameObject;
     }
 
     // Update is called once per frame

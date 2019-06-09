@@ -16,11 +16,14 @@ public class Lamp : MonoBehaviour
     private ScrewUnScrew interactionSUS;// Взаимодействие, отвечающее за откручивание лампочки от цоколя
     [SerializeField]
     private CheckPoint CheckPoint;// Класс оценки действий игрока
+    [SerializeField]
+    private Tasks tasks;// Cписок всех подзадач теста
 
     void Start()
     {
         // Инициализируем взаимодействие СветитьНеСветить
         interaction.initializ(tool, gameObject);
+        tasks.item[0].target = gameObject;
     }
     void Update()
     {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211f6f569b805e545b1a39ad3f6c6e25, type: 3}
   m_Name: Check Point Lamp1
   m_EditorClassIdentifier: 
-  notCheckU: 0
+  notCheckU: 1
   notOffU: 0
   Score: 1
   InputU: 220
