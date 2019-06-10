@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Tasks Test1
   m_EditorClassIdentifier: 
   item:
-  - Description: "\u0417\u0430\u043C\u0435\u043D\u0438\u0442\u044C \u043B\u0430\u043C\u043F\u043E\u0447\u043A\u0443"
+  - Description: "\u041F\u0440\u043E\u0438\u0437\u0432\u0435\u0441\u0442\u0438 \u0437\u0430\u043C\u0435\u043D\u0443
+      \u043B\u0430\u043C\u043F\u043E\u0447\u043A\u0438"
     target: {fileID: 0}
-    done: 0
+    done: -1
     checkPoint: {fileID: 11400000, guid: f70270211e6017e42be13160a4f17e3c, type: 2}
-  - Description: "\u0417\u0430\u043C\u0435\u043D\u0438\u0442\u044C \u0440\u043E\u0437\u0435\u0442\u043A\u0443"
+  - Description: "\u041F\u0440\u043E\u0438\u0437\u0432\u0435\u0441\u0442\u0438 \u0437\u0430\u043C\u0435\u043D\u0443
+      \u0440\u043E\u0437\u0435\u0442\u043A\u0438"
     target: {fileID: 0}
     done: 0
     checkPoint: {fileID: 11400000, guid: b9d586778c0042847800a09a1007fa9e, type: 2}

@@ -34,4 +34,9 @@ public class Panel : MonoBehaviour
         tool.GetComponent<Tool>().name = tools.name;
         tools.DrawTool();
     }
+
+    public void activeOff()
+    {
+        gameObject.SetActive(false);
+    }
 }

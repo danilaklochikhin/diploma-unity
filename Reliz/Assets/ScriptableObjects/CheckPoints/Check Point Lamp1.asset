@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Check Point Lamp1
   m_EditorClassIdentifier: 
   notCheckU: 1
-  notOffU: 0
-  Score: 1
+  notOffU: 1
+  Score: 0
   InputU: 220
-  humidity: 30
+  humidity: 80
