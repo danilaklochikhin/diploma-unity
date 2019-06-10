@@ -37,7 +37,12 @@ public class AssessmemtSistem : MonoBehaviour
             {
                 EndTest("Error security requlation");
             }
-            else if (task.done != 1)// Есть невыполненый элемент задачи
+            else if (task.done == 1)// Есть выполненый элемент задачи
+            {
+                TotalScore += task.checkPoint.Score;
+                task.done = -1; // Отработанная и оцененная задача
+            }
+            else if (task.done < 1 && task.done > 0)// Есть невыполненый элемент задачи
             {
                 testDone = false;
             }
@@ -49,19 +54,12 @@ public class AssessmemtSistem : MonoBehaviour
         }
     }
 
-    public void button()
-    {
-        Debug.Log("End");
-    }
     public void EndTest(string nameDone)
     {
         Debug.Log("End");
         if (nameDone == "Done test")
         {
-            foreach (Task task in tasks.item)
-            {
-                TotalScore += task.checkPoint.Score;
-            }
+            
             Debug.Log(TotalScore);
         }
         else if (nameDone == "end test")

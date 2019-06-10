@@ -79,6 +79,7 @@ public class CheckPoint : ScriptableObject
                     Score = -1;
                 }
             }
-        } 
+        }
+        Debug.Log(Score);
    }
 }

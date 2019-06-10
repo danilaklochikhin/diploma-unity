@@ -17,7 +17,7 @@ public class OnOff : Interactions
     {
         target = go;
 
-        if (tool.GetComponent<Tool>().name == "hand")
+        if (tool.GetComponent<Tool>().name == "hand" || tool.GetComponent<Tool>().name == "gloves")
         {
             if (target.tag == "switch")
             {

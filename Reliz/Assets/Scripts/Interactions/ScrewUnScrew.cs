@@ -30,7 +30,7 @@ public class ScrewUnScrew : Interactions
                 else target.GetComponent<Clam>().screwed = true;
             }
         }
-        else if (tool.GetComponent<Tool>().name == "hand")// Если инструмент рука
+        else if (tool.GetComponent<Tool>().name == "hand" || tool.GetComponent<Tool>().name == "gloves")// Если инструмент рука или перчатки
         {
             if (target.tag == "lamp")// Если объект лампочка
             {

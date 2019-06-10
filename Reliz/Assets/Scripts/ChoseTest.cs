@@ -16,7 +16,7 @@ public class ChoseTest : MonoBehaviour
     void Start()
     {
         Description = tests.item[numberTest].Name;
-        gameObject.GetComponent<Text>().text = Description;
+        gameObject.GetComponentInChildren<Text>().text = Description;
     }
 
     // Update is called once per frame
