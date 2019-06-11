@@ -9,6 +9,8 @@ public class Opening : MonoBehaviour
 
     [SerializeField]
     private Indication interaction;
+    [SerializeField]
+    private CheckPoint checkPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class Opening : MonoBehaviour
     void OnMouseDrag()
     {
         interaction.Display(U);
+        checkPoint.notCheckU = false;
     }
 
     // Кнопка мыши отпущена

@@ -97,5 +97,7 @@ public class Switch : MonoBehaviour
         {
             CheckPoint.NullCheckU();
         }
+        Debug.Log("notOffU = " + CheckPoint.notOffU);
+        Debug.Log("notCheckU = " + CheckPoint.notCheckU);
     }
 }

@@ -21,8 +21,9 @@ public class CheckPoint : ScriptableObject
         if (InputU != 0)
         {
             notOffU = true;
+            Debug.Log("notOffU = " + notOffU);
         }
-
+        Debug.Log("notOffU = " + notOffU);
         Score = 0;
     }
 
@@ -30,6 +31,7 @@ public class CheckPoint : ScriptableObject
     public void NullCheckU()
     {
         notCheckU = true;
+        Debug.Log("notCheckU = " + notCheckU);
         Score = 0;
     }
 
@@ -43,27 +45,27 @@ public class CheckPoint : ScriptableObject
         {
             workOnU = false;
             useGloves = false;
-
+            
             if (notOffU)// Не отключил подачу тока
             {
                 if (notCheckU)// Не проверил наличие напряжения
                 {
-                    Score = 1; // Присвоить низкий балл 
+                    Score = 0; // Присвоить низкий балл 
                 }
                 else
                 {
-                    Score = 2; // Присвоить средний балл
+                    Score = 1; // Присвоить средний балл
                 }
             }
             else 
             {
                 if (notCheckU)// Не проверил наличие напряжения
                 {
-                    Score = 2;
+                    Score = 1;
                 }
                 else
                 {
-                    Score = 3;// Присвоить высокий балл
+                    Score = 2;// Присвоить высокий балл
                 }
             }
         }
@@ -73,14 +75,14 @@ public class CheckPoint : ScriptableObject
             {
                 workOnU = true;
                 useGloves = true;
-                Score = 2;
+                Score = 1;
             }
             else
             {
                 workOnU = true;
                 if (humidity < 70)
                 {
-                    Score = 1;
+                    Score = 0;
                 }
                 else 
                 {
@@ -88,7 +90,7 @@ public class CheckPoint : ScriptableObject
                 }
             }
         }
-        Debug.Log(Score);
+        Debug.Log("Score = "+Score);
    }
 
     public void nullCP()

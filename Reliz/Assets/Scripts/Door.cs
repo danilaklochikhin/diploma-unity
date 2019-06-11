@@ -19,6 +19,6 @@ public class Door : MonoBehaviour
 
     void OnMouseDown()
     {
-        AS.GetComponent<AssessmemtSistem>().EndTest("Done test");
+        AS.GetComponent<AssessmemtSistem>().EndTest("end test");
     }
 }

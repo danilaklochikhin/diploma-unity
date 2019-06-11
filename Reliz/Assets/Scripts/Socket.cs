@@ -58,7 +58,9 @@ public class Socket : MonoBehaviour
 
     void OnMouseDown()
     {
+        bool visible = gameObject.activeInHierarchy;
         interectionSUS.screw(gameObject);
-        checkPoint.CheckInteraction(tool.GetComponent<Tool>().name);
+        if (visible != gameObject.activeInHierarchy)
+            checkPoint.CheckInteraction(tool.GetComponent<Tool>().name);
     }
 }

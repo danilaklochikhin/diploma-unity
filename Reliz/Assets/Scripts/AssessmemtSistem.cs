@@ -18,7 +18,7 @@ public class AssessmemtSistem : MonoBehaviour
     [HideInInspector]
     public int maxScore = 0;// Максимальновозможное количество баллов за тест
     [HideInInspector]
-    public bool testDone = true;// Параметр выполнения всех подзадач в тесте 
+    public bool testDone = true;
     [HideInInspector]
     public bool end = false;
 
@@ -38,8 +38,9 @@ public class AssessmemtSistem : MonoBehaviour
         foreach (Task task in tasks.item)
         {
             // Проверка выполнения подзадачи
-            if (!task.target.activeInHierarchy)// Если объект не активен (Откручен)
+            if (!task.target.activeInHierarchy && task.done != -1)// Если объект не активен (Откручен)
             {
+                
                 task.done = 0.5f;
             }
             else if (task.target.activeInHierarchy && (task.done == 0.5f))// Если объект ранее был не активен (Произведена замена)
@@ -56,18 +57,20 @@ public class AssessmemtSistem : MonoBehaviour
             else if (task.done == 1)// Есть выполненый элемент задачи
             {
                 TotalScore += task.checkPoint.Score;
-                task.done = -1; // Отработанная и оцененная задача
+                task.done = -1; // Отработанная и оцененная задач
             }
-            else if (task.done < 1 && task.done > 0)// Есть невыполненый элемент задачи
+            else if (task.done != -1)
             {
                 testDone = false;
             }
         }
 
-        if (testDone)
+        if (testDone && !end)
         {
             EndTest("Done test");
+            end = true;
         }
+        else testDone = true;
     }
 
     public void EndTest(string nameDone)
@@ -87,16 +90,27 @@ public class AssessmemtSistem : MonoBehaviour
         button.SetActive(true);
         button1.SetActive(true);
 
+        maxScore = 2 * tasks.item.Length;// Максимальное количество баллов за выполнение одного элемента заданаия 
         if (nameDone == "Done test")
         {
-            ResultText.GetComponent<Text>().text = "Тест пройден успешно !";
-            ResultText.GetComponent<Text>().color = Color.blue;
+            if ((100 * TotalScore / maxScore) >= 50)
+            {
+                ResultText.GetComponent<Text>().text = "Тест пройден успешно !";
+                ResultText.GetComponent<Text>().color = Color.blue;
+            }
+            else 
+            {
+                ResultText.GetComponent<Text>().text = "Тест не пройден !";
+                ResultText.GetComponent<Text>().color = Color.red;
+            }
+            
 
             // Вывод выпольненых элементо задачи
             foreach (Task task in tasks.item)
             {
-                maxScore += 3;// Максимальное количество баллов за выполнение одного элемента заданаия 
-
+                Debug.Log("CheckU = " + task.checkPoint.notCheckU);
+                Debug.Log("offU = " + task.checkPoint.notOffU);
+                
                 done(task);
             }
             Score.GetComponent<Text>().text += " "+(100*TotalScore/maxScore)+"%";
@@ -109,8 +123,6 @@ public class AssessmemtSistem : MonoBehaviour
             // Вывод выпольненых элементо задачи
             foreach (Task task in tasks.item)
             {
-                maxScore += 3;// Максимальное количество баллов за выполнение одного элемента заданаия 
-
                 if (task.done != -1 && task.done != 1)
                 {
                     ResultTasks.GetComponent<Text>().text += task.Description + " - не выполнено\n";
@@ -135,7 +147,7 @@ public class AssessmemtSistem : MonoBehaviour
             ResultSecurityR.GetComponent<Text>().text += "Работа в диэлектрических перчатках - ";
             if (t.checkPoint.useGloves)
             {
-                ResultSecurityR.GetComponent<Text>().text += "выполнено !\n";
+                ResultSecurityR.GetComponent<Text>().text += "выполнено\n";
             }
             else ResultSecurityR.GetComponent<Text>().text += "не выполнено !\n";
         }
@@ -143,14 +155,14 @@ public class AssessmemtSistem : MonoBehaviour
         {
             ResultSecurityR.GetComponent<Text>().text += "Отключение токоведущих частей - не выполнено !\n";
         }
-        else ResultSecurityR.GetComponent<Text>().text += "Отключение токоведущих частей - выполнено !\n";
+        else ResultSecurityR.GetComponent<Text>().text += "Отключение токоведущих частей - выполнено\n";
 
         ResultSecurityR.GetComponent<Text>().text += "Проверка напряжения в сети - ";
         if (t.checkPoint.notCheckU)
         {
             ResultSecurityR.GetComponent<Text>().text += "не выполнено !\n";
         }
-        else ResultSecurityR.GetComponent<Text>().text += "выполнено !\n";
+        else ResultSecurityR.GetComponent<Text>().text += "выполнено\n";
 
         ResultSecurityR.GetComponent<Text>().text += "\n";
     }

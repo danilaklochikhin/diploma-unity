@@ -38,6 +38,8 @@ public class Clam : MonoBehaviour
             if (screwed)
             CheckPoint.NullNotOffU();
             else CheckPoint.notOffU = false;
+            Debug.Log("notOffU = " + CheckPoint.notOffU);
+            Debug.Log("notCheckU = " + CheckPoint.notCheckU);
         }
     }
 
@@ -47,6 +49,7 @@ public class Clam : MonoBehaviour
         if (interaction1.Display(U))
         {
             CheckPoint.notCheckU = false;
+            Debug.Log("notCheckU = " + CheckPoint.notCheckU);
         }
     }
 

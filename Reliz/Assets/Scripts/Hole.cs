@@ -32,7 +32,9 @@ public class Hole : MonoBehaviour
     
     void OnMouseDown()
     {
+        bool visible = gameObject.activeInHierarchy;
         interectionSUS.screw(socket);
-        checkPoint.CheckInteraction(tool.GetComponent<Tool>().name);
+        if (visible != gameObject.activeInHierarchy)
+            checkPoint.CheckInteraction(tool.GetComponent<Tool>().name);
     }
 }

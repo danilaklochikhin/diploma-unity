@@ -74,6 +74,8 @@ public class AutomaticSwitch : MonoBehaviour
             CheckPoint.NullNotOffU();
         }
         else CheckPoint.notOffU = false;
+        Debug.Log("notOffU = " + CheckPoint.notOffU);
+        Debug.Log("notCheckU = " + CheckPoint.notCheckU);
     }
 
     IEnumerator Wait()
