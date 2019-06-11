@@ -24,6 +24,8 @@ public class Lamp : MonoBehaviour
         // Инициализируем взаимодействие СветитьНеСветить
         interaction.initializ(tool, gameObject);
         tasks.item[0].target = gameObject;
+        CheckPoint.nullCP();
+        tasks.item[0].done = 0f;
     }
     void Update()
     {

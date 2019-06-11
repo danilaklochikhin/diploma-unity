@@ -111,7 +111,7 @@ public class AssessmemtSistem : MonoBehaviour
             {
                 maxScore += 3;// Максимальное количество баллов за выполнение одного элемента заданаия 
 
-                if (task.done > 0 && task.done < 1)
+                if (task.done != -1 && task.done != 1)
                 {
                     ResultTasks.GetComponent<Text>().text += task.Description + " - не выполнено\n";
                 }

@@ -12,6 +12,7 @@ TagManager:
   - clam
   - Opening
   - AssessmemtSistem
+  - socket
   layers:
   - Default
   - TransparentFX

@@ -29,6 +29,19 @@ public class ScrewUnScrew : Interactions
                 }
                 else target.GetComponent<Clam>().screwed = true;
             }
+            if (target.tag == "socket")// Если объект розетка
+            {
+                if (target.activeInHierarchy)// Если объект активен на сцене
+                {
+                    target.SetActive(false);
+                    target.GetComponent<Socket>().hole.SetActive(true);
+                }
+                else
+                {
+                    target.SetActive(true);
+                    target.GetComponent<Socket>().hole.SetActive(false);
+                }
+            }
         }
         else if (tool.GetComponent<Tool>().name == "hand" || tool.GetComponent<Tool>().name == "gloves")// Если инструмент рука или перчатки
         {

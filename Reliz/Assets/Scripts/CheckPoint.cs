@@ -90,4 +90,13 @@ public class CheckPoint : ScriptableObject
         }
         Debug.Log(Score);
    }
+
+    public void nullCP()
+    {
+        notCheckU = true; 
+        notOffU = true; 
+        workOnU = false;
+        useGloves = false;
+        Score = 0; 
+    }
 }
